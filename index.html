@@ -1,9 +1,450 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Kalmar Fria Läroverk - Webbutveckling</title>
+</head>
 
 <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+    <nav class="nav">
+        <div class="nav__wrapper">
+            <h1 class="nav__logo menu_white">
+                Webbutveckling
+            </h1>
+
+            <!-- <div> -->
+            <input type="checkbox" id="checkbox" class="nav__input nav__mobile" />
+            <label for="checkbox" class="label nav__button nav__mobile">
+                <!-- <img src="img/bars-solid.svg" alt="menu icon" class="nav__icon"> -->
+                <svg class="nav__icon" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+                    class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                    </path>
+                </svg>
+                <!-- https://fontawesome.com/icons/bars?style=solid -->
+            </label>
+
+            <ul class="nav__links" id="list">
+                <li class="nav__link"><a href="#section__one">Webb 1</a></li>
+                <li class="nav__link"><a href="#section__two">Webb 2</a></li>
+                <!-- <li class="nav__link"><a href="#section__three">Tidigare</a></li> -->
+            </ul>
+            <!-- </div> -->
+
+        </div>
+    </nav>
+    <header class="header" id="header">
+        <div class="header__wrapper">
+            <ul class="header__list">
+                <li class="header__item"><a href="https://classroom.google.com/" class="header__link"
+                        target=”_blank”>Classroom</a></li>
+                <li class="header__item"><a href="#" class="header__link" target=”_blank”>Uppgifter</a></li>
+                <li class="header__item"><a href="#" class="header__link" target=”_blank”>Länkar</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="section" id="section__one">
+            <div class="section__wrapper">
+                <h2 class="section__title">Webbutveckling 1, EE19 TE20</h2>
+                <a href="http://ee19-ma.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Mojtaba Akbari</h2>
+                        <p class="card__text">ee19-ma.friakalmar.se</p>
+                        <div class="card__bg"></div>
+                    </div>
+                </a>
+                <a href="http://te20-la.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Loay Albatish</h2>
+                        <p class="card__text">te20-la.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-aa.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Ali Alissa</h2>
+                        <p class="card__text">ee19-aa.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://te20-aa.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Abdallh Alklinj</h2>
+                        <p class="card__text">te20-aa.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-lbj.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Ludwig Broman Johansson</h2>
+                        <p class="card__text">ee19-lbj.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-ac.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Alexander Carling</h2>
+                        <p class="card__text">ee19-ac.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-te.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Tobias Ekman</h2>
+                        <p class="card__text">ee19-te.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-mg.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Mio Gustafsson</h2>
+                        <p class="card__text">ee19-mg.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://te20-ah.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Alen Hajic</h2>
+                        <p class="card__text">te20-ah.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://te20-jh.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Johannes Holmgren</h2>
+                        <p class="card__text">te20-jh.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://te20-nh.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Noa Holtti</h2>
+                        <p class="card__text">te20-nh.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-ph.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Per Håkansson</h2>
+                        <p class="card__text">ee19-ph.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://te20-ajp.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Almer Jansson Pernbert</h2>
+                        <p class="card__text">te20-ajp.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://te20-lj.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Linus Johansson</h2>
+                        <p class="card__text">te20-lj.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-kj.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Karl Jonasson</h2>
+                        <p class="card__text">ee19-kj.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-jk.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Jerry Knape</h2>
+                        <p class="card__text">ee19-jk.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-am.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Alfons Metsälä</h2>
+                        <p class="card__text">ee19-am.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-on.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Oliver Nelson</h2>
+                        <p class="card__text">ee19-on.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-an.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Anton Nilsson</h2>
+                        <p class="card__text">ee19-an.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-eo.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Evert Olsson</h2>
+                        <p class="card__text">ee19-eo.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-ep.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Eric Persson</h2>
+                        <p class="card__text">ee19-ep.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-trb.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Tobias Rosander Backman</h2>
+                        <p class="card__text">ee19-trb.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-mr.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Markus Rütting</h2>
+                        <p class="card__text">ee19-mr.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ee19-os.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Oliwer Sager</h2>
+                        <p class="card__text">ee19-os.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://te20-ks.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Khalil Salame</h2>
+                        <p class="card__text">te20-ks.friakalmar.se</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="section" id="section__two">
+            <div class="section__wrapper">
+
+                <h2 class="section__title">Webbutveckling 2, EE18 TE18</h2>
+
+                <a href="http://faris-abshir.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Faris Abshir</h2>
+                        <p class="card__text">faris-abshir.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://alexander-axelsson.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Alexander Axelsson</h2>
+                        <p class="card__text">alexander-axelsson.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://mohammad-bakhtyari.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Mohammad Bakhtyari</h2>
+                        <p class="card__text">mohammad-bakhtyari.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://olle-brundin.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Olle Brundin</h2>
+                        <p class="card__text">olle-brundin.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://zigge-brundin.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Zigge Brundin</h2>
+                        <p class="card__text">zigge-brundin.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://daniel-henry.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Daniel Henry</h2>
+                        <p class="card__text">daniel-henry.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://pelle-högstedt.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Pelle Högstedt</h2>
+                        <p class="card__text">pelle-högstedt.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://ibrahim-ibrahim.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Ibrahim Ibrahim</h2>
+                        <p class="card__text">ibrahim-ibrahim.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://damian-ikanovic.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Damian Ikanovic</h2>
+                        <p class="card__text">damian-ikanovic.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://calle-johansson.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Calle Johansson</h2>
+                        <p class="card__text">calle-johansson.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://henrik-lagrosen.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Henrik Lagrosen</h2>
+                        <p class="card__text">henrik-lagrosen.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://linus-lindberg.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Linus Lindberg</h2>
+                        <p class="card__text">linus-lindberg.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://castor-lundqvist.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Castor Lundqvist</h2>
+                        <p class="card__text">castor-lundqvist.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://oliver-mittbrodt.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Oliver Mittbrodt</h2>
+                        <p class="card__text">oliver-mittbrodt.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://jan-mustafa.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Jan Mustafa</h2>
+                        <p class="card__text">jan-mustafa.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://olle-ottevi.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Olle Ottevi</h2>
+                        <p class="card__text">olle-ottevi.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://simon-persson-nilsson.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Simon Persson</h2>
+                        <p class="card__text">simon-persson-nilsson.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://kewin-petersson.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Kewin Petersson</h2>
+                        <p class="card__text">kewin-petersson.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://simon-petersson.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Simon Petersson</h2>
+                        <p class="card__text">simon-petersson.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://lukas-samby.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Lukas Samby</h2>
+                        <p class="card__text">lukas-samby.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://tiger-stenqvist.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Tiger Stenqvist</h2>
+                        <p class="card__text">tiger-stenqvist.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://jacek-stys.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Jacek Stys</h2>
+                        <p class="card__text">jacek-stys.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="http://benny-tran.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Benny Tran</h2>
+                        <p class="card__text">benny-tran.friakalmar.se</p>
+                    </div>
+                </a>
+
+                <a href="http://benny-tran.friakalmar.se" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Benny Tran</h2>
+                        <p class="card__text">benny-tran.friakalmar.se</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- extra klass  -->
+        <!-- <section class="section" id="section__three">
+            <div class="section__wrapper">
+
+                <h2 class="section__title">Klass 3</h2>
+
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+                <a href="#" class="card__link" target=”_blank”>
+                    <div class="section__card">
+                        <h2 class="card__title">Förnamn Efternamn</h2>
+                        <p class="card__text">first-last.friakalmar.se</p>
+                    </div>
+                </a>
+            </div>
+        </section> -->
+
+        <!-- <iframe src="http://www.joel-johansson.friakalmar.se/" frameborder="0" scrolling="no"></iframe> -->
+    </main>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
