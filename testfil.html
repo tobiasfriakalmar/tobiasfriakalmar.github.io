@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="http://koda.nu/simple.js">
+        // if (confirm("Vill du veta hemligheten?")) {
+        //     alert("Du får glass i julklapp.");
+        // } else {
+        //     alert("Slipp då!");
+        // }
+
+        var name = prompt("Hej, vad heter du?");
+        var age = promptNumber("Hur gammal är du?");
+
+        text(50, 150, 20, "Hej	" + name + "!", "black");
+
+        if (age < 20) {
+            text(50, 250, 20, "Glöm det", "black");
+        } else if (age < 25) {
+            text(50, 250, 20, "Du behöver visa legitimation", "black");
+        } else {
+            text(50, 250, 20, "Oj vad gammal du är!", "black");
+        }
+    </script>
+</body>
+
+</html>

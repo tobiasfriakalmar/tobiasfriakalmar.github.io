@@ -218,10 +218,8 @@ Använd de röda markeringarna för att göra anteckningar….
 
 ![bg center:60% 60%](img/avslut.png)
 
----
 <!-- ![Tux, the Linux mascot](test.png)
 
 [Read more about MD](https://https://www.markdownguide.org/basic-syntax/). -->
-
 
 ---
