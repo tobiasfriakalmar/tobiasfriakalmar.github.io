@@ -89,7 +89,7 @@ Använd de röda markeringarna för att göra anteckningar….
     }
 </style>
 
-![bg right:40% 80%](img/router.png)
+![bg right:40% 80%](img/router.jpg)
 
 # ROUTER
  - Används till att koppla samman nätverk med varandra
