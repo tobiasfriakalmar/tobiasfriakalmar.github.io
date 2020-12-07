@@ -1,0 +1,114 @@
+header {
+    background-color: lightblue;
+
+    // Använd flex som exempel på genererad CSS
+    display: flex;
+    justify-content: center;
+}
+
+
+// variabler 
+
+$primaryBtn: rgb(55, 145, 140);
+
+// Vanlig bakgrund för knapp: 
+// Båda dessa, plus fler, skulle behöva bytas ut vid färgändring
+header button {
+    // background: red; dåligt
+    background: $primaryBtn;
+}
+
+.contacts button {
+    // background: red; dåligt
+    background: $primaryBtn;
+}
+
+// Skulle variablen bytas ut kommer alla färger att ändras. Ett exempel till
+
+$textClr: rgb(150, 150, 150);
+
+header {
+    color: $textClr;
+}
+
+
+// Nesting
+
+header {
+    background-color: lightblue;
+
+    display: flex;
+    justify-content: center;
+    button {
+        background: $primaryBtn;
+        // Visa olika exempel med selektorer
+        &:hover {
+            background: red;
+        }
+        &::after {
+            content: 'Helloooooo!';
+        }
+    }
+}
+
+// Dela upp i olika dokument. 
+// _header.scss
+@import './header';
+// eller 
+@use './header';
+// för nyare arbeten 
+
+// Variabler kan också flyttas till ett eget dokument
+
+
+// Mixins
+
+header {
+    
+    align-items: center;
+    // vid uprepning av tex flex
+
+}
+
+// @mixin flexCenter {
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// header {
+//     @include flexCenter();
+// }
+
+// .contacts {
+//     @include flexCenter();
+// }
+
+// mixins, egenskaper
+// En i taget! 
+
+@mixin flexCenter($direction, $background) {
+    flex-direction: $direction;
+    background: $background;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+header {
+    @include flexCenter(row, red)
+}
+
+// återanvänd css
+
+.contacts {
+    @extend header;
+}
+
+.contacts {
+    width: 100% - 20%;
+}
