@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        #hint:checked ~ .hidden {
+            display: block;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello there, grupp 1</h1>
+    <p>Ni klarade er andra utmaning, här kommer nästa. </p>
+
+    <br>
+
+    <p>Nästa kryptering: </p>
+    <p>01100100 01100101 01111000 01111000 01110010 01100100 01110101 01101001 01101001 01110010 01100111 01111001 01100110 01101000 01110010 01100110</p>
+
+    <br>
+    
+    <div>
+        <input type="checkbox" id="hint" name="scales">
+        <label for="hint">Klicka för ledtråd...</label>
+        <p class="hidden">Titta på de tecken du ser, vilka är det?  </p>
+        <p class="hidden">Vilka tecken kan du se?  </p>
+        <p class="hidden">Vad för talsystem känner du till?  </p>
+        
+    </div>
+</body>
+</html>
