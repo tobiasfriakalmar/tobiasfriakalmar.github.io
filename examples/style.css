@@ -99,6 +99,22 @@ main {
 h2 {
   border-bottom: 3px solid #fff;
 }
+
+.area-other {
+  grid-column: 1 / -1;
+
+}
+
+.area-other h2 {
+  grid-column: 1 / -1;
+}
+
+.area-other ul {
+  display: grid;
+  grid: auto / 1fr 1fr;
+  column-gap: 5em;
+}
+
 @media only screen and (max-width: 700px) {
   main {
     width: 90%;
