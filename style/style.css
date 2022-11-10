@@ -1,9 +1,9 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1, h2, h3, ul {
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
 }
 
 a {
@@ -23,7 +23,6 @@ a {
   color: #fff;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-
 .header__link:hover {
   color: #d4d4d4;
 }
@@ -47,68 +46,43 @@ ul {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: ease-in-out 250ms;
-  transition: ease-in-out 250ms;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 body {
-  display: -ms-grid;
   display: grid;
-  grid: 4.375rem 50vh 1fr / auto;
+  grid: 4.375rem 50vh 1fr/auto;
 }
 
 .nav {
   position: relative;
-  -webkit-transition: ease-in-out 500ms;
-  transition: ease-in-out 500ms;
 }
-
 .nav__wrapper {
   padding: 0 2rem;
   height: 4.375rem;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   z-index: 99;
 }
-
 .nav__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   min-width: -webkit-min-content;
   min-width: -moz-min-content;
   min-width: min-content;
 }
-
 .nav__link {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 1 0 auto;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 .5em;
+  justify-content: center;
+  padding: 0 0.5em;
 }
-
 .nav__mobile {
   display: none;
 }
-
 .nav__icon {
   width: 5vw;
 }
@@ -121,9 +95,10 @@ body {
   position: relative;
 }
 
-.lable--stripe::before, .lable--stripe::after {
+.lable--stripe::before,
+.lable--stripe::after {
   position: absolute;
-  content: '';
+  content: "";
   height: 3px;
   left: 0;
   right: 0;
@@ -139,13 +114,11 @@ body {
   bottom: -7px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 780px) {
   .nav__links {
     display: none;
   }
   .nav__mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     z-index: 99;
   }
@@ -156,30 +129,22 @@ body {
     position: absolute;
     left: 10%;
     z-index: 99;
-    -webkit-filter: invert(100);
-            filter: invert(100);
+    color: #fff !important;
   }
   #checkbox:checked ~ .nav__links {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
-    height: 280px;
+    height: 100vh;
     left: 0;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
+    padding: 3rem 0;
+    font-size: 2rem;
   }
   #checkbox:checked .nav__link {
     margin-bottom: 2em !important;
@@ -189,33 +154,21 @@ body {
     color: red !important;
   }
 }
-
 .header {
   background-image: linear-gradient(135deg, rgba(44, 0, 35, 0.8), rgba(117, 19, 93, 0.2)), url("../img/bg.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
-
 .header__wrapper {
-  padding: 0 1em .5em 0;
+  padding: 0 1em 0.5em 0;
 }
-
 .header__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .header__item {
   margin-left: 1em;
 }
@@ -223,51 +176,28 @@ body {
 .section {
   padding: 2em;
 }
-
 .section__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
-
 .section__card {
-  padding: .5em 1em;
-  margin-bottom: .5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding: 0.5em 1em;
+  margin-bottom: 0.5em;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
   position: relative;
+  flex: 1 1 0;
 }
-
 .section__card:hover {
-  background-color: rgba(23, 23, 23, 0.01);
   border-radius: 25px;
-  -webkit-box-shadow: 4px 4px 10px rgba(23, 23, 23, 0.2);
-          box-shadow: 4px 4px 10px rgba(23, 23, 23, 0.2);
+  box-shadow: 4px 4px 10px rgba(23, 23, 23, 0.2);
 }
-
 .section__card:hover .card__text {
-  color: #3b8bc0;
+  color: rgb(59, 139, 192);
 }
-
 .section .card__bg {
   display: none;
   position: absolute;
@@ -279,17 +209,10 @@ body {
   background-size: cover;
   background-position: left 10%;
 }
-
 .section__title {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  padding-bottom: .5em;
+  flex: 1 1 100%;
+  padding-bottom: 0.5em;
   border-bottom: 2px solid #232323;
-}
-
-.card__title {
-  margin-bottom: 0;
 }
 
 .test-bg {
@@ -297,4 +220,7 @@ body {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
-/*# sourceMappingURL=style.css.map */
+
+svg {
+  height: 2rem;
+}/*# sourceMappingURL=style.css.map */
