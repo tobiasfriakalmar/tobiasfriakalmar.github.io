@@ -70,7 +70,6 @@ body {
 }
 .nav__links {
   display: flex;
-  min-width: -webkit-min-content;
   min-width: -moz-min-content;
   min-width: min-content;
 }

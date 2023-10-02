@@ -1,0 +1,40 @@
+@use "font";
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-image: url(../img/bg.jpg);
+    padding: 10vw 0;
+
+    &__heading {
+        background-image: url("../img/bg.jpg");
+        background-size: cover;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: black;
+        font-size: calc(100vw / 14);
+        text-align: right;
+        position: relative;
+        margin: 0;
+        z-index: 99;
+        display: inline-block;
+
+        &::after {
+            content: "";
+            position: absolute;
+           background-color: #fff;
+           inset: 0;
+        }
+
+    }
+}
