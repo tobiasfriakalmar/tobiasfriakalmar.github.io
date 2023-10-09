@@ -11,8 +11,13 @@ a {
   text-decoration: none;
 }
 
+main a {
+  font-family: "Roboto", sans-serif;
+}
+
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html, body {
@@ -24,26 +29,76 @@ body {
 }
 
 .header {
-  background-image: url(../img/bg.jpg);
-  padding: 10vw 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(23, 23, 23, 0.6)), url("../img/bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.header__title {
+  flex: 1 1 0;
+  place-items: center;
+  display: flex;
+  place-content: center;
 }
 .header__heading {
-  background-image: url("../img/bg.jpg");
-  background-size: cover;
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: black;
-  font-size: 7.1428571429vw;
-  text-align: right;
-  position: relative;
-  margin: 0;
-  z-index: 99;
-  display: inline-block;
+  opacity: 0.8;
+  font-size: calc(7.1428571429% + 6vw);
+  text-shadow: 2px 2px rgba(23, 23, 23, 0.6);
 }
-.header__heading::after {
-  content: "";
-  position: absolute;
-  background-color: #fff;
-  inset: 0;
+.header .nav {
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  font-size: calc(1rem + 1vw);
+}
+.header .nav__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.header .nav__link:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 550px) {
+  .header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(23, 23, 23, 0.6) 80%), url("../img/bg.jpg");
+  }
+  .header__title {
+    flex-basis: 100%;
+  }
+  .header__heading {
+    font-size: 11.1428571429vw;
+    margin: 0 auto;
+  }
+  .header .nav {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  .header .nav__links {
+    align-items: center;
+    font-size: 7.1428571429vw;
+  }
+}
+.main {
+  padding: 2em;
+}
+.main__section {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+.main__card {
+  padding: 2em 3em;
+  text-align: center;
+}
+
+.section__heading {
+  flex-basis: 100%;
+  letter-spacing: 2px;
 }/*# sourceMappingURL=style.css.map */
