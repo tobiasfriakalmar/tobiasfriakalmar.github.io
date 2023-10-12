@@ -13,6 +13,20 @@ body {
     margin: 0;
 }
 
+.rotate {
+    animation: rotate 1s;
+    display: inline-block;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .header {
     background-image: linear-gradient(
         to right, 
@@ -20,20 +34,31 @@ body {
         rgba(23, 23, 23, 0.6)
       ),
       url("../img/bg.jpg");
+      background-attachment: fixed;
     background-size: cover;
     height: 100vh;
 
     display: flex;
     flex-wrap: wrap;
+    // justify-content: space-evenly;
+    gap: 2em;
 
     color: #fff;
+    box-shadow: 0px 2px 8px 5px rgba(23, 23, 23, 0.6);
 
 
     &__title {
-        flex: 1 1 0;
-        place-items: center;
+        padding-left: 1em;
+        // flex: 1 1 0;
         display: flex;
+        place-items: center;
         place-content: center;
+
+
+    }
+    &__logo {
+        font-size: calc((100% / 14) + 6vw);
+
     }
 
     &__heading {
@@ -41,6 +66,7 @@ body {
         // font-size: calc(2rem + 5vw);
         font-size: calc((100% / 14) + 6vw);
         text-shadow: 2px 2px rgba(23, 23, 23, 0.6);
+        user-select: none;
 
     }
 
@@ -58,12 +84,18 @@ body {
             padding: 0;
             display: flex;
             flex-direction: column;
-            gap: 1em
-            // background-color: green;
+            gap: 1em;
+
+        }
+
+        &__link {
+            transition: ease 200ms;
         }
 
         &__link:hover {
             opacity: .5;
+            font-size: calc(100% + 5px);
+            padding: .25em 0;
         }
     }
 }
@@ -105,22 +137,34 @@ body {
 
 .main {
     padding: 2em;
+    display: flex;
 
-    &__section {
-        display: flex;
-        gap: 1em;
-        flex-wrap: wrap;
-        // background-color: green;
+    > * {
+        flex: 1 1 0;
+        
+        // background-image: linear-gradient(45deg, black, white);
     }
 
     &__card {
-        // background-color: blue;
-        padding: 2em 3em;
-        text-align: center;
+        display: block;
+        padding-left: 2em;
+        margin: 2em 0;
     }
-}
 
-.section__heading {
-    flex-basis: 100%;
-    letter-spacing: 2px;
-}
+    &__card--name {
+        color: rgb(215, 186, 125);
+    }
+
+    &__card--url {
+        color: rgb(181, 206, 168);
+    }
+
+    &__card--prop-url {
+        padding-left: 2em;
+        color: rgb(156, 220, 254);
+    }
+
+    p {
+        display: inline;
+    }
+    }
