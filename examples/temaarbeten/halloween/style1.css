@@ -197,3 +197,21 @@ input {
     float: none;
   }
 }
+
+.pop {
+  position: fixed;
+  background-image: url(https://cdn.openart.ai/stable_diffusion/a8e76aeff87cfe60efb4a5e9c572c409984f0b2f_2000x2000.webp);
+  background-size: cover;
+  background-position: center;
+  background-color: green;
+  top: -100vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  transition: ease-in-out 0.05s;
+  /* scale: 1; */
+}
+
+/* .pop:hover {
+  scale: 2;
+} */

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style1.css" />
   </head>
   <body>
+    <div class="pop"></div>
     <div class="wrapper">
       <header>
         <img src="img/halloween.png" alt="logo" class="header--logo" />
@@ -74,14 +75,60 @@
           <ul>
             <li>Lista för saker att ha på Halloween!</li>
           </ul>
-          <li><input type="checkbox" /> Läskig pumpa</li>
-          <li><input type="checkbox" /> Utklädsel: Spöke, pirat eller katt</li>
-          <li><input type="checkbox" /> Godis</li>
-          <li><input type="checkbox" /> Pumpkin spice latte</li>
-          <li><input type="checkbox" /> Barn att skrämma</li>
+          <li><input type="checkbox" class="check" /> Läskig pumpa</li>
+          <li>
+            <input type="checkbox" class="check" /> Utklädsel: Spöke, pirat
+            eller katt
+          </li>
+          <li><input type="checkbox" class="check" /> Godis</li>
+          <li><input type="checkbox" class="check" /> Pumpkin spice latte</li>
+          <li>
+            <input type="checkbox" class="check checkboo" /> Barn att skrämma
+          </li>
         </ol>
       </section>
     </div>
     <div class="ghost"><img src="img/ghost.gif" alt="ghost" /></div>
+
+    <script>
+      const logo = document.querySelector(".header--logo");
+
+      logo.addEventListener("mouseover", function () {
+        alert("BOO!");
+      });
+
+      const checkAll = document.querySelectorAll(".check");
+
+      checkAll.forEach((check) => {
+        check.addEventListener("click", function () {
+          if (check.checked) {
+            check.parentElement.style.textDecoration = "line-through";
+          } else {
+            check.parentElement.style.textDecoration = "none";
+          }
+        });
+      });
+
+      let i = 250;
+
+      const checkBoo = document.querySelector(".checkboo");
+      checkBoo.addEventListener("click", function () {
+        if (checkBoo.checked) {
+          document.querySelector(".pop").style.top = "0";
+          window.setTimeout(function () {
+            document.querySelector(".pop").style.scale = "5";
+          }, i);
+          window.setTimeout(function () {
+            document.querySelector(".pop").style.scale = "1";
+          }, i * 2);
+          window.setTimeout(function () {
+            document.querySelector(".pop").style.scale = "5";
+          }, i * 3);
+          window.setTimeout(function () {
+            document.querySelector(".pop").style.scale = "1";
+          }, i * 4);
+        }
+      });
+    </script>
   </body>
 </html>
