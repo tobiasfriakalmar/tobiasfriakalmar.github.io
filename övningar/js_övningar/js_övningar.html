@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;900&family=Roboto:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="heading heading-1">Övningar för JavaScript</h1>
+      <h2 class="heading heading-2">Webbutveckling 1 & 2</h2>
+      <p>
+        Här hittar du övningar för JavaScript. Övningarna är uppdelade i olika
+        svårighetsgrader, men passar både
+        <span>Webbutveckling 1 och Webbutveckling 2</span>. Varje länk laddar
+        ner en fil och du hittar instruktioner till varje fil i kommentarerna i
+        filen. De första övningarna är väldigt enkla och passar dig som är helt
+        ny på JavaScript. De senare övningarna är mer avancerade och passar dig
+        som har lite mer erfarenhet av JavaScript.
+      </p>
+      <div class="övningar">
+        <div class="övn-1">
+          <h3></h3>
+          <p>
+            Vi använder JavaScript för att tillföra något på våra webbsidor. Ett
+            exempel på det kan vara att ändra ett utseende. För det behöver vi
+            kod som <span>hämtar</span> det vi vill ändra på och
+            <span>ändrar</span> det. I det här fallet vill vi ändra på
+            bakgrundsfärgen på vår sida. Vi börjar med att hämta
+            <span>body</span> och sedan ändrar vi bakgrundsfärgen till
+            <span>red</span>.
+          </p>
+          <a href="test.txt" download
+            ><img src="download-solid.svg" alt="Download icon"
+          /></a>
+        </div>
+        <div class="övn-2">
+          <h3></h3>
+          <p>
+            Oftast vill vi att något ändras på sidan när vi klickar på något. På
+            så sätt kan vi styra när förändringen ser. I den här övningen ska en
+            knapp ändra bakgrundsfärgen till röd.
+          </p>
+          <a href="test.txt" download
+            ><img src="download-solid.svg" alt="Download icon"
+          /></a>
+        </div>
+        <div class="övn-3">
+          <h3></h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
+            illo, dolores, harum facere enim, a nemo reiciendis fugiat explicabo
+            repellendus officia fugit saepe iure tempore inventore odit! Ipsum,
+            itaque? Minima.
+          </p>
+          <a href="test.txt" download
+            ><img src="download-solid.svg" alt="Download icon"
+          /></a>
+        </div>
+        <div class="övn-4">
+          <h3></h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
+            illo, dolores, harum facere enim, a nemo reiciendis fugiat explicabo
+            repellendus officia fugit saepe iure tempore inventore odit! Ipsum,
+            itaque? Minima.
+          </p>
+          <a href="test.txt" download
+            ><img src="download-solid.svg" alt="Download icon"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const heading = document.querySelectorAll("h3");
+      const link = document.querySelectorAll("a");
+
+      for (let i = 0; i < heading.length; i++) {
+        heading[i].innerHTML = "Övning " + (i + 1);
+      }
+      for (let i = 0; i < link.length; i++) {
+        link[i].href = "övning-" + (i + 1) + ".html";
+      }
+    </script>
+  </body>
+</html>
