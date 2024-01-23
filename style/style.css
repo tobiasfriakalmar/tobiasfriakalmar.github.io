@@ -78,6 +78,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 0.5em;
+  font-size: 0.9rem;
 }
 .nav__mobile {
   display: none;
@@ -113,7 +114,7 @@ body {
   bottom: -7px;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 900px) {
   .nav__links {
     display: none;
   }
