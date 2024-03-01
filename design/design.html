@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header></header>
+    <nav>
+      <div class="nav__btn nav__btn--1 active">pt1</div>
+      <div class="nav__btn nav__btn--2">pt2</div>
+    </nav>
+    <main>
+      <div class="main__info">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos eum
+          perferendis voluptatem veritatis totam, doloremque enim. Porro
+          consectetur in omnis dolorem temporibus odit, quam at, commodi harum
+          odio, et blanditiis!
+        </p>
+      </div>
+      <div class="main__about main__hide">
+        <img src="https://unsplash.it/250" alt="" />
+      </div>
+    </main>
+
+    <script>
+      const nav = document.querySelector("nav");
+      const main = document.querySelector("main");
+      const mainWidth = getComputedStyle(main).width;
+      const navBtn1 = document.querySelector(".nav__btn--1");
+      const navBtn2 = document.querySelector(".nav__btn--2");
+      const mainInfo = document.querySelector(".main__info");
+      const mainAbout = document.querySelector(".main__about");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset === nav.offsetTop) {
+          //   console.log("Nav is at the top of the screen");
+          //   nav.style.gridColumn = "4 / -4";
+          nav.style.width = mainWidth;
+        } else {
+          //   console.log("Nav is not at the top of the screen");
+          //   nav.style.gridColumn = "1 / -1";
+          nav.style.width = "100%";
+        }
+      });
+
+      navBtn1.addEventListener("click", () => {
+        navBtn1.classList.add("active");
+        navBtn2.classList.remove("active");
+        // mainAbout.classList.add("main__hide");
+        // mainInfo.classList.remove("main__hide");
+
+        mainAbout.style.left = "100%";
+        mainInfo.style.right = "0";
+      });
+      navBtn2.addEventListener("click", () => {
+        navBtn2.classList.add("active");
+        navBtn1.classList.remove("active");
+        // mainAbout.classList.remove("main__hide");
+        // mainInfo.classList.add("main__hide");
+
+        mainAbout.style.left = "0";
+        mainInfo.style.right = "100%";
+      });
+    </script>
+  </body>
+</html>
