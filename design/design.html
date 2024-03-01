@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,14 +41,15 @@
       const mainInfo = document.querySelector(".main__info");
       const mainAbout = document.querySelector(".main__about");
 
+      window.onload = () => {
+        nav.style.width = "100%";
+        document.body.style.opacity = "1";
+      };
+
       window.addEventListener("scroll", () => {
         if (window.pageYOffset === nav.offsetTop) {
-          //   console.log("Nav is at the top of the screen");
-          //   nav.style.gridColumn = "4 / -4";
           nav.style.width = mainWidth;
         } else {
-          //   console.log("Nav is not at the top of the screen");
-          //   nav.style.gridColumn = "1 / -1";
           nav.style.width = "100%";
         }
       });
@@ -50,20 +57,20 @@
       navBtn1.addEventListener("click", () => {
         navBtn1.classList.add("active");
         navBtn2.classList.remove("active");
-        // mainAbout.classList.add("main__hide");
-        // mainInfo.classList.remove("main__hide");
 
         mainAbout.style.left = "100%";
+        mainAbout.style.opacity = "0";
         mainInfo.style.right = "0";
+        mainInfo.style.opacity = "1";
       });
       navBtn2.addEventListener("click", () => {
         navBtn2.classList.add("active");
         navBtn1.classList.remove("active");
-        // mainAbout.classList.remove("main__hide");
-        // mainInfo.classList.add("main__hide");
 
         mainAbout.style.left = "0";
+        mainAbout.style.opacity = "1";
         mainInfo.style.right = "100%";
+        mainInfo.style.opacity = "0";
       });
     </script>
   </body>
