@@ -51,16 +51,20 @@
       const mainInfo = document.querySelector(".main__info");
       const mainAbout = document.querySelector(".main__about");
 
+      var on = "100%";
+      var off = "0";
+      var fullWidth = "100%";
+
       window.onload = () => {
-        nav.style.width = "100%";
-        document.body.style.opacity = "1";
+        nav.style.width = fullWidth;
+        document.body.style.opacity = on;
       };
 
       window.addEventListener("scroll", () => {
         if (window.pageYOffset === nav.offsetTop) {
           nav.style.width = mainWidth;
         } else {
-          nav.style.width = "100%";
+          nav.style.width = fullWidth;
         }
       });
 
@@ -68,19 +72,19 @@
         navBtn1.classList.add("active");
         navBtn2.classList.remove("active");
 
-        mainAbout.style.left = "100%";
-        mainAbout.style.opacity = "0";
-        mainInfo.style.right = "0";
-        mainInfo.style.opacity = "1";
+        mainAbout.style.left = fullWidth;
+        mainAbout.style.opacity = off;
+        mainInfo.style.right = off;
+        mainInfo.style.opacity = on;
       });
       navBtn2.addEventListener("click", () => {
         navBtn2.classList.add("active");
         navBtn1.classList.remove("active");
 
-        mainAbout.style.left = "0";
-        mainAbout.style.opacity = "1";
-        mainInfo.style.right = "100%";
-        mainInfo.style.opacity = "0";
+        mainAbout.style.left = off;
+        mainAbout.style.opacity = on;
+        mainInfo.style.right = fullWidth;
+        mainInfo.style.opacity = off;
       });
     </script>
   </body>
